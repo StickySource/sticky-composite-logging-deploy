@@ -10,7 +10,7 @@
 
   <groupId>net.stickycode.composite</groupId>
   <artifactId>sticky-composite-logging-deploy</artifactId>
-  <version>3.2</version>
+  <version>3.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>${project.artifactId}-3</name>
@@ -21,7 +21,7 @@
   <scm>
     <connection>${git.url}</connection>
     <developerConnection>${git.url}</developerConnection>
-    <tag>sticky-composite-logging-deploy-3.2</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
