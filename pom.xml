@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) 2011 RedEngine Ltd, http://www.redengine.co.nz. All rights reserved. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-		<groupId>net.stickycode.parent</groupId>
-		<artifactId>sticky-parent-jar8</artifactId>
-		<version>1.2</version>
-	</parent>
-	<modelVersion>4.0.0</modelVersion>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <parent>
+    <groupId>net.stickycode.parent</groupId>
+    <artifactId>sticky-parent-jar8</artifactId>
+    <version>3.1</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.stickycode.composite</groupId>
-	<artifactId>sticky-composite-logging-deploy</artifactId>
-	<version>3.2-SNAPSHOT</version>
-	<packaging>jar</packaging>
+  <groupId>net.stickycode.composite</groupId>
+  <artifactId>sticky-composite-logging-deploy</artifactId>
+  <version>3.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-	<name>sticky-composite-logging-deploy-3</name>
-	<description>Composition of artifacts used to actually process log requests, uses logback as a native implementation of slf4j</description>
-	<url>http://www.StickyCode.net/composite/logging-deploy/</url>
-	<inceptionYear>2007</inceptionYear>
+  <name>${project.artifactId}-3</name>
+  <description>Composition of artifacts used to actually process log requests, uses logback as a native implementation of slf4j</description>
+  <url>https://stickycode.readthedocs.io/en/latest/composition/index.html</url>
+  <inceptionYear>2007</inceptionYear>
 
-	<scm>
-		<connection>scm:svn:http://stickycode.googlecode.com/svn/trunk/net.stickycode.composite/sticky-composite-logging-deploy</connection>
-		<developerConnection>scm:svn:https://stickycode.googlecode.com/svn/trunk/net.stickycode.composite/sticky-composite-logging-deploy</developerConnection>
-		<url>http://code.google.com/p/stickycode/source/browse/#svn/trunk/net.stickycode.composite/sticky-composite-logging-deploy</url>
-	</scm>
+  <scm>
+    <connection>${git.url}</connection>
+    <developerConnection>${git.url}</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
 
-	<dependencies>
-		<dependency>
-			<groupId>net.stickycode.composite</groupId>
-			<artifactId>sticky-composite-logging-api</artifactId>
-			<version>[3.2,4)</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-			<version>[1.1.3]</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>[1.1.3]</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>logback-core</artifactId>
-					<groupId>ch.qos.logback</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>net.stickycode.composite</groupId>
+      <artifactId>sticky-composite-logging-api</artifactId>
+      <version>[3.3,4)</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>[1.2.3]</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>[1.2.3]</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>logback-core</artifactId>
+          <groupId>ch.qos.logback</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
 </project>
